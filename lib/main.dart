@@ -36,12 +36,54 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Container(
         constraints: BoxConstraints.expand(),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          crossAxisAlignment: CrossAxisAlignment.end,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Text("View A"),
-            Text("View B"),
-            Text("View C")
+            Expanded(
+                child: Container(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      Expanded(
+                          child: Container(
+                            color: Colors.red,
+                            child: Center(
+                                child: Text("A")
+                            ),
+                          ),
+                      ),
+                      Expanded(
+                        child: Container(
+                          color: Colors.purple,
+                            child: Center(
+                                child: Text("B")
+                            ),
+                        ),
+                      ),
+                      Expanded(
+                        child: Container(
+                          color: Colors.lime,
+                            child: Center(
+                                child: Text("C")
+                            ),
+                        ),
+                      ),
+                      Expanded(
+                        child: Container(
+                          color: Colors.green,
+                            child: Center(
+                                child: Text("D")
+                            ),
+                        ),
+                      ),
+                    ],
+                  ),
+                )
+            ),
+            Expanded(
+                child: Container(
+                  color: Colors.blue,
+                )
+            ),
           ],
         ),
       ),
